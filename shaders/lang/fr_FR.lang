@@ -1,0 +1,394 @@
+# Copyright (C) Continuum Graphics - Tous droits réservés (Copyright (C) Continuum Graphics - All Rights Reserved)
+# La copie de ce fichier n'est pas autorisée, quel que soit le média
+# Exclusif et confidentiel
+# Écrit par Joseph Conover <support@continuum.graphics>, Février 2018
+# Traduit par Raphoulfifou, Juin 2021
+
+# shaders/lang/fr_FR.lang
+
+# Profiles
+profile.MINIMUM=Minimum
+profile.LOW=Faible
+profile.MEDIUM=Moyen
+profile.HIGH=Élevé
+profile.ULTRA=Ultra
+profile.CINEMATIC=Cinématique
+
+#Screens
+screen.CAMERA=Paramètres de la caméra
+screen.CAMERA.comment=Options pour la camera, le DoF, et la carte des tons (tonemap).
+screen.LENS=Paramètres de l'objectif
+screen.LENS.comment=Paramètres DoF et Reflets de l'objectif. Configure la forme du bokeh.
+screen.TONING=Paramètres de post-traitement
+screen.TONING.comment=Configure les options liées au post-traitement.
+screen.FILMIC=Modificateurs filmiques
+screen.FILMIC.comment=Options pour l'opérateur Filmique de la carte des tons.
+screen.TAAOPTIONS=Options du TAA
+screen.TAAOPTIONS.comment=Options pour l'anticrénelage temporel (TAA)
+screen.SURFACE=Paramètres de surface
+screen.SURFACE.comment=Qualité de l'éclairage et des paramètres des matériaux. Attention peut modifier considérablement les performances !
+screen.PARALLAX=Paramètres du parallaxe
+screen.PARALLAX.comment=Paramètres du parallaxe
+screen.MATERIAL=Paramètres des matériaux
+screen.MATERIAL.comment=Paramètres des matériaux.
+screen.SHADOW=Paramètres des ombres
+screen.SHADOW.comment=Paramètres des ombres
+screen.AMBIENT=Paramètres de la lumière ambiante
+screen.AMBIENT.comment=Paramètres de l'AO
+screen.SPECULAR=Paramètres spéculaires
+screen.SPECULAR.comment=Paramètres spéculaires/de réflexion
+screen.GI=Paramètres d'éclairage global
+screen.GI.comment=Paramètres pour l'éclairage global
+screen.ATMOSPHERICS=Paramètres atmosphériques
+screen.ATMOSPHERICS.comment=Paramètres qui ont à voir avec l'atmosphère
+screen.CLOUDS=Paramètres des nuages
+screen.CLOUDS.comment=Paramètres pour les nuages 2D et volumétriques
+screen.VCLOUDS=Paramètres du nuage volumétrique
+screen.VCLOUDS.comment=Paramètres pour les nuages volumétriques
+screen.VLIGHT=Paramètres d'éclairage volumétrique
+screen.VLIGHT.comment=Lumière volumétrique
+screen.INTERNAL=Paramètres internes
+screen.INTERNAL.comment=Options de développement !
+screen.MISC=Paramètres divers
+screen.MISC.comment=Paramètres non attribués
+screen.LIGHTING=Paramètres d'éclairage
+screen.LIGHTING.comment=Paramètres d'éclairage général
+
+# Camera Settings
+value.CAMERA_MODE.CAMERA_AUTO=Auto
+value.CAMERA_MODE.CAMERA_MANUAL=Manuel
+
+option.CAMERA_MODE=Mode de la caméra
+option.CAMERA_MODE.comment=Mode de fonctionnement de la caméra. « Auto » est le meilleur pour le jeu, où la caméra s'ajustera. « Manuel » est préférable pour les captures d'écran et les cinématiques, où un contrôle précis de la caméra est nécessaire.
+option.CAMERA_APERTURE=Ouverture
+option.CAMERA_APERTURE.comment=Taille de l'ouverture, en diaphragmes.
+option.CAMERA_ISO=ISO
+option.CAMERA_ISO.comment=Sensibilité du capteur à la lumière.
+option.CAMERA_SHUTTER_SPEED=Vitesse d'obturation
+option.CAMERA_SHUTTER_SPEED.comment=Temps d'exposition de chaque image.
+option.CAMERA_EV=Décalage de l'EV
+option.CAMERA_EV.comment=Réglage de l'exposition.
+option.CAMERA_FOCAL_LENGTH=Distance focale
+option.CAMERA_FOCAL_LENGTH.comment=Distance du foyer primaire en millimètres. Effets lens flare et DOF en mode manuel.
+suffix.CAMERA_FOCAL_LENGTH= mm
+
+value.CAMERA_FOCUS_MODE.1=Manuel
+value.CAMERA_FOCUS_MODE.0=Auto
+
+option.CAMERA_FOCUS_MODE=Mode de mise au point de la caméra
+option.CAMERA_FOCUS_MODE.comment=Mode de mise au point de la caméra. « Auto » se concentre sur tout ce que le joueur regarde. « Manuel » permet au joueur de définir la distance à laquelle la caméra essaie de se concentrer en mètres.
+option.CAMERA_FOCAL_POINT=Point focal de la caméra
+option.CAMERA_FOCAL_POINT.comment=Distance à laquelle l'appareil photo essaie de faire la mise au point lorsqu'il est réglé sur le mode de mise au point manuelle.
+suffix.CAMERA_FOCAL_POINT= m
+
+# DoF Settings
+value.DOF_SAMPLES.DOF_MINIMUM=Minimum
+value.DOF_SAMPLES.DOF_LOW=Faible
+value.DOF_SAMPLES.DOF_MEDIUM=Moyen
+value.DOF_SAMPLES.DOF_HIGH=Élevé
+value.DOF_SAMPLES.DOF_ULTRA=Ultra
+value.DOF_SAMPLES.DOF_CINEMATIC=Cinematique
+
+option.DOF=Profondeur de champ
+option.DOF.comment=Mise au point de la caméra.
+option.DOF_SAMPLES=Qualité du DoF
+option.DOF_SAMPLES.comment=Qualité du flou. Faible - 32. Moyen - 64. Élevé - 128. Ultra - 256. Cinématique - 1024.
+
+option.CAMERA_BLADES=Nombre de lames d'ouverture
+option.CAMERA_BLADES.comment=Le nombre de faces de l'objectif :. 3 = triangulaire. 4 = Carré. 5 = Pentagone. 6 = Hexagone. etc.
+option.BLADE_ROTATION=Rotation de la lame
+option.BLADE_ROTATION.comment=Fait tourner le bokeh autour du centre.
+option.BLADE_ROUNDING=Arrondi de la lame
+option.BLADE_ROUNDING.comment=La quantité d'arrondi ou « d'adoucissement » autour des bords de la forme de l'ouverture. 0 = pas de rondeur. 1 = entièrement rond (cercle) 
+option.CAMERA_BIAS=Biais de la caméra
+option.CAMERA_BIAS.comment=Modifie l'absorption de la lentille. 0,0 = entièrement absorbé. 1,0 = entièrement transmis. 
+option.LENS_SHIFT_AMOUNT=Quantité de décalage d'objectif
+option.DISTORTION_ANAMORPHIC=Distorsion anamorphique
+
+# Lens Settings
+value.BLOOM_SAMPLES.BLOOM_LOW=Faible
+value.BLOOM_SAMPLES.BLOOM_MEDIUM=Moyen
+value.BLOOM_SAMPLES.BLOOM_HIGH=Élevé
+value.BLOOM_SAMPLES.BLOOM_ULTRA=Ultra
+
+option.LENS_FLARE=Reflets de l'objectif
+option.LENS_FLARE_STRENGTH=Force des reflets de l'objectif
+
+option.BLOOM=Bloom
+option.BLOOM_SAMPLES=Qualité du Bloom
+option.BLOOM_EV=EC du Bloom
+option.BLOOM_EV.comment=Offset Bloom EV. Ajuste la luminosité du bloom. 
+option.BLOOM_CURVE=Courbure du Bloom
+
+# Post Process Settings
+option.TONING_FILMIC=Carte des tons Filmiques
+option.SAT_MOD=Saturation
+option.SAT_MOD.comment=Modificateur de saturation
+option.VIB_MOD=Vibrant
+option.VIB_MOD.comment=Modificateur de vibrant
+option.CONT_MOD=Contraste
+option.CONT_MOD.comment=Modificateur de contraste
+option.CONT_MIDPOINT=Point médian de contraste
+option.GAMMA_CORRECTION=Gamma
+option.GAIN_MOD=Gain
+option.GAIN_MOD.comment=Luminosité directe.
+option.LIFT_MOD=Ascenseur
+option.LIFT_MOD.comment=Déplace le point noir.
+option.LUT=L.U.T
+option.WHITE_BALANCE=Balance des blancs
+option.TINT_BALANCE=Teinte
+
+option.ACES_TOE=Doigt de pied
+option.ACES_SLOPE=Pente
+option.ACES_SHOULDER=Épaule
+option.ACES_BLACK_CLIP=Clip Noir
+option.ACES_WHITE_CLIP=Clip Blanc
+option.ACES_GLOW_GAIN=Modificateur de lueur
+option.ACES_GLOW_MID=Point médian de lueur
+option.ACES_EXPAND_GAMUT=Extension de la gamme
+
+# TAA options
+option.TAA_AGGRESSION=Agression du TAA
+option.TAA_SHARPNESS=Netteté du TAA
+option.TAA_SHARPEN=Affutage du TAA
+
+# Light Settings
+option.sky_sunLuminanceBase=Luminance du soleil
+option.sky_sunColorTemperature=Température du soleil
+option.sky_moonLuminanceBase=Luminance de la Lune
+option.sky_moonColorTemperature=Température de la Lune
+option.TORCH_LUMINANCE=Luminance des torches
+option.TORCH_TEMPERATURE=Temp"ratures des torches
+
+suffix.sky_sunColorTemperature=K
+suffix.sky_moonColorTemperature=K
+suffix.TORCH_TEMPERATURE=K
+
+suffix.sky_sunLuminanceBase= lx
+suffix.sky_moonLuminanceBase= lx
+suffix.TORCH_LUMINANCE= lx
+
+# Shadow Settings
+value.SHADOW_QUALITY.SHADOW_MINIMUM=Minimum
+value.SHADOW_QUALITY.SHADOW_LOW=Faible
+value.SHADOW_QUALITY.SHADOW_MEDIUM=Moyen
+value.SHADOW_QUALITY.SHADOW_HIGH=Élevé
+value.SHADOW_QUALITY.SHADOW_ULTRA=Ultra
+value.SHADOW_QUALITY.SHADOW_CINEMATIC=Cinematique
+
+option.SHADOW_QUALITY=Qualité des Ombres
+option.SHADOW_QUALITY.comment=Qualité du flou d'ombre. Minimum - 2. Bas - 3. Moyen - 9. Haut - 18. Ultra - 25. Cinématique - 81.
+option.SHADOW_PENUMBRA_ANGLE=Angle de pénombre
+option.shadowMapResolution=Résolution de la carte d'ombre
+option.shadowDistance=Distance d'ombre
+option.SHADOW_DISTORTION_FACTOR=Facteur de distorsion
+
+value.SHADOW_TYPE.SHADOW_HARD=Ombres dures
+value.SHADOW_TYPE.SHADOW_SOFT=Ombres douces
+value.SHADOW_TYPE.SHADOW_PCSS=Double PCSS
+
+option.SHADOW_TYPE=Type d'ombre
+
+option.CAUSTICS=Caustiques de l'eau
+
+# Ambient Settings
+value.AMBIENT_SAMPLES.AMBIENT_MINIMUM=Minimum
+value.AMBIENT_SAMPLES.AMBIENT_LOW=Faible
+value.AMBIENT_SAMPLES.AMBIENT_MEDIUM=Moyen
+value.AMBIENT_SAMPLES.AMBIENT_HIGH=Élevé
+value.AMBIENT_SAMPLES.AMBIENT_ULTRA=Ultra
+value.AMBIENT_SAMPLES.AMBIENT_CINEMATIC=Cinematique
+
+option.AMBIENT_SAMPLES=Qualité ambiante
+option.AMBIENT_SAMPLES.comment=Qualité de l'AO.
+
+option.AO_CHEAP=AO peut coûteuse
+option.AO_CHEAP.comment=Désactive l'AO en champ lointain
+
+# Specular Settings
+option.SPECULAR_CLAMP=Pince spéculaire
+option.SPECULAR_TAIL_CLAMP=Biais de pince spéculaire
+value.SPECULAR_QUALITY.SPECULAR_MINIMUM=Minimum
+value.SPECULAR_QUALITY.SPECULAR_LOW=Faible
+value.SPECULAR_QUALITY.SPECULAR_MEDIUM=Moyen
+value.SPECULAR_QUALITY.SPECULAR_HIGH=Élevé
+value.SPECULAR_QUALITY.SPECULAR_ULTRA=Ultra
+value.SPECULAR_QUALITY.SPECULAR_CINEMATIC=Cinematique
+
+option.SPECULAR_QUALITY=Qualité spéculaire
+option.SPECULAR_QUALITY.comment=Rayons spéculaires par pixel.
+
+option.RAIN_PUDDLES=Flaques de pluie
+
+option.REFLECT_2D_CLOUDS=Reflèter les nuages 2D
+option.REFLECT_3D_CLOUDS=Reflèter les nuages 3D
+option.REFLECTED_CLOUDS_QUALITY=Qualité des nuages réfléchis
+option.REFLECTED_CLOUDS_QUALITY_DIRECT=Qualité d'éclairage des nuages réfléchis
+
+value.REFLECTED_CLOUDS_QUALITY.REFLECTED_CLOUDS_MINIMUM=Minimum
+value.REFLECTED_CLOUDS_QUALITY.REFLECTED_CLOUDS_LOW=Faible
+value.REFLECTED_CLOUDS_QUALITY.REFLECTED_CLOUDS_MEDIUM=Moyen
+value.REFLECTED_CLOUDS_QUALITY.REFLECTED_CLOUDS_HIGH=Élevé
+value.REFLECTED_CLOUDS_QUALITY.REFLECTED_CLOUDS_ULTRA=Ultra
+value.REFLECTED_CLOUDS_QUALITY.REFLECTED_CLOUDS_CINEMATIC=Cinematique
+
+value.REFLECTED_CLOUDS_QUALITY_DIRECT.REFLECTED_CLOUDS_MINIMUM=Minimum
+value.REFLECTED_CLOUDS_QUALITY_DIRECT.REFLECTED_CLOUDS_LOW=Faible
+value.REFLECTED_CLOUDS_QUALITY_DIRECT.REFLECTED_CLOUDS_MEDIUM=Moyen
+value.REFLECTED_CLOUDS_QUALITY_DIRECT.REFLECTED_CLOUDS_HIGH=Élevé
+value.REFLECTED_CLOUDS_QUALITY_DIRECT.REFLECTED_CLOUDS_ULTRA=Ultra
+value.REFLECTED_CLOUDS_QUALITY_DIRECT.REFLECTED_CLOUDS_CINEMATIC=Cinematique
+
+value.RAYTRACE_QUALITY.RAYTRACE_MINIMUM=Minimum
+value.RAYTRACE_QUALITY.RAYTRACE_LOW=Faible
+value.RAYTRACE_QUALITY.RAYTRACE_MEDIUM=Moyen
+value.RAYTRACE_QUALITY.RAYTRACE_HIGH=Élevé
+value.RAYTRACE_QUALITY.RAYTRACE_ULTRA=Ultra
+value.RAYTRACE_QUALITY.RAYTRACE_CINEMATIC=Cinematique
+
+option.RAYTRACE_QUALITY=Qualité du Ray Tracing
+option.RAYTRACE_QUALITY.comment=Marches par rayon.
+
+value.RAYTRACE_REFINES.REFINES_MINIMUM=Minimum
+value.RAYTRACE_REFINES.REFINES_LOW=Faible
+value.RAYTRACE_REFINES.REFINES_MEDIUM=Moyen
+value.RAYTRACE_REFINES.REFINES_HIGH=Élevé
+value.RAYTRACE_REFINES.REFINES_ULTRA=Ultra
+value.RAYTRACE_REFINES.REFINES_CINEMATIC=Cinematique
+
+option.RAYTRACE_REFINES=Précision du Ray Tracing
+option.RAYTRACE_REFINES.comment=Affines par rayon.
+
+# Parallax Settings
+option.TERRAIN_PARALLAX=Parallaxe
+option.WATER_PARALLAX=Parallaxe de l'eau
+
+value.TERRAIN_PARALLAX_SAMPLES.PARALLAX_MINIMUM=Minimum
+value.TERRAIN_PARALLAX_SAMPLES.PARALLAX_LOW=Faible
+value.TERRAIN_PARALLAX_SAMPLES.PARALLAX_MEDIUM=Moyen
+value.TERRAIN_PARALLAX_SAMPLES.PARALLAX_HIGH=Élevé
+value.TERRAIN_PARALLAX_SAMPLES.PARALLAX_ULTRA=Ultra
+value.TERRAIN_PARALLAX_SAMPLES.PARALLAX_CINEMATIC=Cinematique
+
+option.TERRAIN_PARALLAX_SAMPLES=Qualité du Parallaxe
+option.TERRAIN_PARALLAX_SAMPLES.comment=Marches maximales.
+
+value.WATER_PARALLAX_SAMPLES.WPARALLAX_MINIMUM=Minimum
+value.WATER_PARALLAX_SAMPLES.WPARALLAX_LOW=Faible
+value.WATER_PARALLAX_SAMPLES.WPARALLAX_MEDIUM=Moyen
+value.WATER_PARALLAX_SAMPLES.WPARALLAX_HIGH=Élevé
+value.WATER_PARALLAX_SAMPLES.WPARALLAX_ULTRA=Ultra
+value.WATER_PARALLAX_SAMPLES.WPARALLAX_CINEMATIC=Cinematique
+
+option.WATER_PARALLAX_SAMPLES=Qualité du Parallaxe
+
+option.TERRAIN_PARALLAX_DEPTH=Profondeur de parallaxe
+option.WATER_PARALLAX_DEPTH=Profondeur de parallaxe de l'eau
+
+# Material Settings
+value.SPECULAR_MODE.SPECULAR_OLD=Ancien PBR
+value.SPECULAR_MODE.SPECULAR_NEW=PBR de Continuum 
+value.SPECULAR_MODE.SPECULAR_LAB=Lab PBR
+
+option.SPECULAR_MODE=Format de carte spéculaire
+option.SPECULAR_MODE.comment=Utilise 'Lab PBR' avec des textures plus récentes qui utilisent le format PBR de shaderLABs. Utilise 'Ancien PBR' avec des textures plus anciennes qui utilisent l'ancien format PBR. Utilise 'PBR de Continuum' avec des textures qui utilisent l'ancien format Continuum PBR. 
+
+option.REFRACTION=Réfraction
+
+# Atmospheric Settings
+option.CLOUDS_2D=Nuages 2D
+option.CLOUDS_2D_DENSITY=Densité des nuages 2D
+option.CLOUDS_2D_COVERAGE=Couverture des nuages 2D
+
+option.VOLUMETRIC_CLOUDS=Nuages volumétriques
+
+value.VOLUMETRIC_CLOUDS_QUALITY.VC_MINIMUM=Minimum
+value.VOLUMETRIC_CLOUDS_QUALITY.VC_LOW=Faible
+value.VOLUMETRIC_CLOUDS_QUALITY.VC_MEDIUM=Moyen
+value.VOLUMETRIC_CLOUDS_QUALITY.VC_HIGH=Élevé
+value.VOLUMETRIC_CLOUDS_QUALITY.VC_ULTRA=Ultra
+value.VOLUMETRIC_CLOUDS_QUALITY.VC_CINEMATIC=Cinematique
+
+option.VOLUMETRIC_CLOUDS_QUALITY=Qualité des nuages volumétriques
+
+option.VOLUMETRIC_CLOUDS_ALTITUDE=Altitude
+option.VOLUMETRIC_CLOUDS_SPEED=Vitesse
+option.VOLUMETRIC_CLOUDS_DENSITY=Densité
+option.VOLUMETRIC_CLOUDS_COVERAGE=Couverture
+
+option.VOLUMETRIC_CLOUDS_SHADOWS=Ombre des nuages
+option.VOLUMETRIC_CLOUDS_SHADOWS_STEPS=Qualité des ombres des nuages
+
+value.VOLUMETRIC_CLOUDS_SHADOWS_STEPS.VCS_MINIMUM=Minimum
+value.VOLUMETRIC_CLOUDS_SHADOWS_STEPS.VCS_LOW=Faible
+value.VOLUMETRIC_CLOUDS_SHADOWS_STEPS.VCS_MEDIUM=Moyen
+value.VOLUMETRIC_CLOUDS_SHADOWS_STEPS.VCS_HIGH=Élevé
+value.VOLUMETRIC_CLOUDS_SHADOWS_STEPS.VCS_ULTRA=Ultra
+value.VOLUMETRIC_CLOUDS_SHADOWS_STEPS.VCS_CINEMATIC=Cinematique
+
+value.VOLUMETRIC_CLOUDS_DIRECT_QUALITY.VCL_MINIMUM=Minimum
+value.VOLUMETRIC_CLOUDS_DIRECT_QUALITY.VCL_LOW=Faible
+value.VOLUMETRIC_CLOUDS_DIRECT_QUALITY.VCL_MEDIUM=Moyen
+value.VOLUMETRIC_CLOUDS_DIRECT_QUALITY.VCL_HIGH=Élevé
+value.VOLUMETRIC_CLOUDS_DIRECT_QUALITY.VCL_ULTRA=Ultra
+value.VOLUMETRIC_CLOUDS_DIRECT_QUALITY.VCL_CINEMATIC=Cinematique
+
+option.VOLUMETRIC_CLOUDS_DIRECT_QUALITY=Qualité directe
+
+value.VOLUMETRIC_CLOUDS_INDIRECT_QUALITY.VCL_MINIMUM=Minimum
+value.VOLUMETRIC_CLOUDS_INDIRECT_QUALITY.VCL_LOW=Faible
+value.VOLUMETRIC_CLOUDS_INDIRECT_QUALITY.VCL_MEDIUM=Moyen
+value.VOLUMETRIC_CLOUDS_INDIRECT_QUALITY.VCL_HIGH=Élevé
+value.VOLUMETRIC_CLOUDS_INDIRECT_QUALITY.VCL_ULTRA=Ultra
+value.VOLUMETRIC_CLOUDS_INDIRECT_QUALITY.VCL_CINEMATIC=Cinematique
+
+option.VOLUMETRIC_CLOUDS_INDIRECT_QUALITY=Qualité indirecte
+option.HQ_CLOUD_FBM=Nuages FBM haute qualité
+
+option.VOLUMETRIC_LIGHT=Lumière Volumétrique
+
+value.VL_QUALITY.VL_MINIMUM=Minimum
+value.VL_QUALITY.VL_LOW=Faible
+value.VL_QUALITY.VL_MEDIUM=Moyen
+value.VL_QUALITY.VL_HIGH=Élevé
+value.VL_QUALITY.VL_ULTRA=Ultra
+value.VL_QUALITY.VL_CINEMATIC=Cinematique
+
+option.VL_QUALITY=Qualité de la lumière volumétrique
+
+option.AERIAL_VL=Lumière volumétrique aérienne
+
+option.VL_COLOURED_SHADOW=Ombres colorées
+
+option.VL_CLOUD_SHADOW=Ombres des nuages
+option.VL_SELF_SHADOW=Auto-ombrage
+
+option.MORNING_FOG_FALLOFF=Chute du brouillard du matin
+option.MORNING_FOG_DENSITY=Densité du brouillard du matin
+
+#global illumination Settings
+option.GLOBAL_ILLUMINATION=Illumination globale
+option.GI_RADIUS=Rayon
+option.GI_QUALITY=Qualité
+
+value.GI_QUALITY.GI_MINIMUM=Minimum
+value.GI_QUALITY.GI_LOW=Faible
+value.GI_QUALITY.GI_MEDIUM=Moyen
+value.GI_QUALITY.GI_HIGH=Élevé
+value.GI_QUALITY.GI_ULTRA=Ultra
+value.GI_QUALITY.GI_CINEMATIC=Cinematique
+
+option.TIME_SPEED=Multiplicateur de vitesse
+option.WHITE_WORLD=Monde Blanc
+
+# Debug settings
+option.DEBUG=Déboguage
+option.DEBUG_VIEW=Vue de déboguage
+value.DEBUG_VIEW.-1=gbuffers_solid
+value.DEBUG_VIEW.0=différé
+value.DEBUG_VIEW.9=gbuffers_translucide
+value.DEBUG_VIEW.10=composite
+value.DEBUG_VIEW.11=composite1
+value.DEBUG_VIEW.12=composite2
+value.DEBUG_VIEW.13=composite3
+value.DEBUG_VIEW.20=final
